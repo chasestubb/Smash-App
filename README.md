@@ -2,9 +2,9 @@
 Android smash bros helper app that display character statistics, generates a random character, and suggests a character for a user based on form answers.
 
 #### Developers, developers, developers:
-Reese Benson :: bensonre
-Michael Commins :: mcommins
-Winston Pingnomo :: pingnomw
+Reese Benson :: bensonre<br/>
+Michael Commins :: mcommins<br/>
+Winston Pingnomo :: pingnomw<br/>
 Chase Stubblefield :: chasestubb
 
 ### Character Recommendation Feature
