@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--DRAWER LAYOUT-->
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context="com.example.android.sqliteweather.MainActivity"
+    android:fitsSystemWindows="true">
+<!--    android:orientation="vertical"-->
+
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+<!--        TOOLBAR-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:background="@color/colorPrimary"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="12dp">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forecast_for"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_forecast_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:textColor="#000"
+                android:textSize="42sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_forecast_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tv_loading_error_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:padding="16dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="@android:color/holo_red_light"
+                android:textColor="#fff"
+                android:visibility="invisible"
+                android:text="@string/loading_error_message" />
+
+            <ProgressBar
+                android:id="@+id/pb_loading_indicator"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="32dp"
+                android:layout_gravity="top|center_horizontal"
+                android:visibility="invisible"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- CAUSING CRASH -->
+<!--    <LinearLayout-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="match_parent">-->
+
+    <!-- NAV DRAWER RECYCLER VIEW -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_gravity="start"
+        android:id="@+id/rv_nav_drawer"
+        android:layout_width="270dp"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary"
+        />
+        <!--            android:fitsSystemWindows="true"-->
+<!--        android:layout_gravity="start"-->
+
+
+        <!--        app:menu="@menu/nav_drawer"/>-->
+
+<!--    ADDED-->
+<!--    </LinearLayout>-->
+
+</androidx.drawerlayout.widget.DrawerLayout>
